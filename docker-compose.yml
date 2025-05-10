@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   frontend:
@@ -18,6 +18,6 @@ services:
       - mongo
 
   mongo:
-    image: mongo
+    image: mongo:4.2.24
     ports:
       - "27017:27017"
