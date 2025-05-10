@@ -5,13 +5,13 @@ function App() {
   const [newItem, setNewItem] = useState('');
 
   const fetchItems = async () => {
-    const res = await fetch('http://localhost:4000/items');
+    const res = await fetch('http://192.168.99.100:4000/items');
     const data = await res.json();
     setItems(data);
   };
 
   const addItem = async () => {
-    await fetch('http://localhost:4000/items', {
+    await fetch('http://192.168.99.100:4000/items', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: newItem }),
